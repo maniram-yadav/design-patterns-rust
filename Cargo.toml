@@ -1,0 +1,17 @@
+[package]
+name = "design-patterns-rust"
+version = "1.1.1"
+authors = ["Maniram yadav"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/maniram-yadav/design-patterns-rust"
+
+[lints.rust]
+unused = "allow"
+unsafe_code = "forbid"
+
+[lints.clippy]
+enum_glob_use = "deny"
+
+
+[build]
+rustflags = ["-A non_snake_case"]
