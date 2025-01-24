@@ -66,7 +66,7 @@ pub struct GpsNavigator {
 }
 
 impl GpsNavigator {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self::from_route(
             "221b, Baker Street, London  to Scotland Yard, 8-10 Broadway, London".into(),
         )
