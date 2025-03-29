@@ -6,8 +6,8 @@ use super::bank::Bank;
 
 pub struct PaymentGateway {
     clients : Vec<String>,
-    banks : Vec<String>,
-    router : Vec<String>,
+    banks : Vec<Bank>,
+    router : Router,
     payment_strategy : HashMap<String,Box<dyn PaymentStrategy>>
 
 }
@@ -23,7 +23,7 @@ impl PaymentGateway {
             clients : Vec::new(),
             banks : Vec::new(),
             router : Router{banks: Vec::<Bank>::new()},
-            payment_strategies,
+            payment_strategy: payment_strategies,
         }
     }
 }

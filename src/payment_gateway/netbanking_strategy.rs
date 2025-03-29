@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use super::payment_strategy::PaymentStrategy;
 use rand::Rng;
 use rand;
+use rng;
 
 
 pub struct NetBankingStrategy;
@@ -16,7 +17,7 @@ impl PaymentStrategy for NetBankingStrategy {
             return Err("Username or pasword cannot be empty".to_string()) ;
         }
         Ok(rand::thread_rng().random_bool(0.5))
-        
+
     }
 
 }
