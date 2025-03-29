@@ -1,5 +1,6 @@
 #[derive(Debug,Clone)]
-struct Bank {
+
+pub struct Bank {
     name : String,
-    traffic_percent:f64,
+    traffic_percent : f64,
 }
